@@ -1,5 +1,5 @@
 function barrasDV(boxe = []){
-    
+
 var somaBox   = 0
 var somaBox1  = 0
 var somaBox2  = 0
@@ -17,10 +17,12 @@ var somaTotal = 0
     
     somaTotal = Number((10*(1 + somaBox)) - (somaBox1 + somaBox2))
 
+    if(somaTotal >= 10){
+        somaTotal = 0
+    }
+
     return  somaTotal
 }
-
-barrasDV('7891000315507')
 
 function validar(){
     var box = document.getElementById('box')
@@ -41,39 +43,38 @@ function validar(){
                     res.innerHTML += ` </br> GTIN-13 origem BRASIL: ${codigoPais}`
                     break;
                 case 779:
-                    res.innerHTML += ` GTIN-13 origem ARGENTINA: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem ARGENTINA: ${codigoPais}`
                     break;
                 case 773:
-                    res.innerHTML += ` GTIN-13 origem URUGUAI: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem URUGUAI: ${codigoPais}`
                     break;
                 case 790:
-                    res.innerHTML += ` GTIN-13 origem BRASIL: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem BRASIL: ${codigoPais}`
                     break;
                 case 780:
-                    res.innerHTML += ` GTIN-13 origem CHILE: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem CHILE: ${codigoPais}`
                     break;
                 case 784:
-                    res.innerHTML += ` GTIN-13 origem PARAGUAI: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem PARAGUAI: ${codigoPais}`
                     break;
                 case 770:
-                    res.innerHTML += ` GTIN-13 origem COLÔMBIA: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem COLÔMBIA: ${codigoPais}`
                     break;
                 case 743:
-                    res.innerHTML += ` GTIN-13 origem NICARÁGUA: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem NICARÁGUA: ${codigoPais}`
                 break;
                 case 600:
-                    res.innerHTML += ` GTIN-13 origem ÁFRICA DO SUL: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem ÁFRICA DO SUL: ${codigoPais}`
                     break;
                 case 601:
-                    res.innerHTML += ` GTIN-13 origem ÁFRICA DO SUL: ${codigoPais}`
+                    res.innerHTML += ` </br> GTIN-13 origem ÁFRICA DO SUL: ${codigoPais}`
                     break;
                 default:
-                    res.innerHTML += ` VAREJOS S/A não vende para esse pais: ${codigoPais}`
+                    res.innerHTML += ` </br> VAREJOS S/A não vende para esse pais: ${codigoPais}`
                     break;
             }
-
         }else{
             res.innerHTML = `Digito verificador invalido: ${barrasDV(box.value)}`
     }
 }
-46
+
