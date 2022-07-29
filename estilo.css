@@ -12,6 +12,9 @@ header{
     text-align: center;
     margin-bottom: 50px;
 }
+h1{
+    margin-bottom: 20px;
+}
 
 section{    
     min-width: 300px;
